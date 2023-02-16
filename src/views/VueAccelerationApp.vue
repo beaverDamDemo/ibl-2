@@ -1,5 +1,31 @@
 <template>
   <div id="app">
+    <Input v-model="value1" size="large" placeholder="large size"></Input>
+    <br />
+    <Input v-model="value2" placeholder="default size"></Input>
+    <br />
+    <Input v-model="value3" size="small" placeholder="small size"></Input>
+
+    <RadioGroup v-model="phone">
+      <Radio label="apple">
+        <Icon type="social-apple"></Icon>
+        <span>Apple</span>
+      </Radio>
+      <Radio label="android">
+        <Icon type="social-android"></Icon>
+        <span>Android</span>
+      </Radio>
+      <Radio label="windows">
+        <Icon type="social-windows"></Icon>
+        <span>Windows</span>
+      </Radio>
+    </RadioGroup>
+    <RadioGroup v-model="animal">
+      <Radio label="金斑蝶"></Radio>
+      <Radio label="爪哇犀牛"></Radio>
+      <Radio label="印度黑羚"></Radio>
+    </RadioGroup>
+
     <button
       style="position: absolute; right: 20px; top: 10px"
       class="btn btn-danger"
@@ -19,15 +45,7 @@
       <!-- <canvas id="myChart"></canvas> -->
     </div>
     <div class="myButContainer">
-      <button
-        @click="startButtonClick"
-        type="button"
-        class="btn btn-success"
-        :disabled="
-          store.selectedEngine == undefined ||
-          store.selectedCarPreset == undefined
-        "
-      >
+      <button @click="startButtonClick" type="button" class="btn btn-success">
         Run
       </button>
       <button @click="exportWithSheetJS" class="btn btn-primary" disabled>
@@ -51,7 +69,7 @@ export default {
   },
   data() {
     return {
-      store: store,
+      // store: store,
       divRpm: 50,
       maxg: 0.8,
       finalGearMin: 200,
@@ -62,6 +80,8 @@ export default {
       myChartShow: false,
       mode: "oneGear",
       showMyChart: false,
+      phone: undefined,
+      animal: undefined,
     };
   },
   created() {
@@ -544,43 +564,38 @@ export default {
     },
   },
   mounted() {
-    store.selectedEngine = 0;
-    store.selectedCarPreset = 0;
-    //  let f= [630, 685, 731, 779, 816, 854, 888, 924, 948, 971, 992, 1012, 1018, 1032, 1054, 1038, 1020, 1002, 992, 980, 958, 880, 800, 720]
-    //
-    //          for(let i=0; i<f.length; i++) {
-    //              f[i] = Math.round(f[i]*0.9857)
-    //          }
+    // store.selectedEngine = 0;
+    // store.selectedCarPreset = 0;
     //  debugger
-    this.sendData();
-    this.$eventBus.$on("initialSpeedInputChange", (e) => {
-      this.initialSpeed = e;
-    });
-    this.$eventBus.$on("finalGearMinChange", (e) => {
-      this.finalGearMin = e;
-    });
-    this.$eventBus.$on("finalGearMaxChange", (e) => {
-      this.finalGearMax = e;
-    });
-    this.$eventBus.$on("splitsChange", (e) => {
-      this.splits = e;
-    });
-    this.$eventBus.$on("selectEngineChange", (e) => {
-      console.log("⛳ ~ e", e);
-      store.selectedEngine = e;
-      this.drawPowerAndTorqueChart();
-    });
-    this.$eventBus.$on("selectCarPresetChange", (e) => {
-      store.selectedCarPreset = e;
-      store.weightKg = store.carPresets[e].weightKg;
-      store.aeroCx = store.carPresets[e].aeroCx;
-      store.rollingRes = store.carPresets[e].rollingRes;
-      store.maximumAccG = store.carPresets[e].maximumAccG;
-    });
-    this.$eventBus.$on("selectMode", (e) => {
-      this.mode = e;
-    });
-    this.drawPowerAndTorqueChart();
+    // this.sendData();
+    // this.$eventBus.$on("initialSpeedInputChange", (e) => {
+    //   this.initialSpeed = e;
+    // });
+    // this.$eventBus.$on("finalGearMinChange", (e) => {
+    //   this.finalGearMin = e;
+    // });
+    // this.$eventBus.$on("finalGearMaxChange", (e) => {
+    //   this.finalGearMax = e;
+    // });
+    // this.$eventBus.$on("splitsChange", (e) => {
+    //   this.splits = e;
+    // });
+    // this.$eventBus.$on("selectEngineChange", (e) => {
+    //   console.log("⛳ ~ e", e);
+    //   store.selectedEngine = e;
+    //   this.drawPowerAndTorqueChart();
+    // });
+    // this.$eventBus.$on("selectCarPresetChange", (e) => {
+    //   store.selectedCarPreset = e;
+    //   store.weightKg = store.carPresets[e].weightKg;
+    //   store.aeroCx = store.carPresets[e].aeroCx;
+    //   store.rollingRes = store.carPresets[e].rollingRes;
+    //   store.maximumAccG = store.carPresets[e].maximumAccG;
+    // });
+    // this.$eventBus.$on("selectMode", (e) => {
+    //   this.mode = e;
+    // });
+    // this.drawPowerAndTorqueChart();
   },
 };
 
