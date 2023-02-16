@@ -11,7 +11,6 @@
     "build:produzione": "node build/build.js --env.patch --config webpack.produzione.conf.js --verbose"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
     "@aspnet/signalr": "^1.0.2",
     "@ckeditor/ckeditor5-build-classic": "^16.0.0",
     "@ckeditor/ckeditor5-vue": "^1.0.1",
@@ -28,6 +27,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "bootstrap-vue": "^2.0.0-rc.9",
+    "core-js": "^3.8.3",
     "detect-browser": "^3.0.0",
     "element-ui": "^2.4.11",
     "es6-promise-promise": "^1.0.0",
@@ -71,6 +71,7 @@
     "vuex-loading": "^1.0.4",
     "vuex-map-fields": "^1.1.7",
     "webpack-auto-inject-version": "^1.1.0",
+    "webpack-bundle-analyzer": "^4.8.0",
     "yarn": "^1.7.0"
   },
   "devDependencies": {
