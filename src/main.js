@@ -1,6 +1,4 @@
-// import Vue from "vue";
-// import App from "./App";
-// import router from "./router";
+
 // import Vuex from "vuex";
 // import VueWait from "vue-wait";
 // import axios from "axios";
@@ -12,7 +10,6 @@
 // import Vuebar from "vuebar";
 // import vuescroll from "vuescroll";
 // import "vuescroll/dist/vuescroll.css";
-// import store from "./store";
 // import { ClientTable } from "vue-tables-2";
 // import "./require.js";
 // import interceptorsSetup from "./interceptors/interceptors.js";
