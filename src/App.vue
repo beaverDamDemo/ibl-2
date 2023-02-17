@@ -3,7 +3,8 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/vue-acceleration">Vue acceleration</router-link>
+      <router-link to="/vue-acceleration">Vue acceleration</router-link> |
+      <router-link to="/form-iview">Form Iview</router-link>
     </nav>
     <router-view />
   </div>
@@ -20,6 +21,7 @@
   color: rgb(196, 50, 83);
   min-height: 100vh;
   padding: 30px;
+  text-align: center;
 }
 
 nav {

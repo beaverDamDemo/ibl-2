@@ -22,6 +22,10 @@ const routes = [
     path: '/vue-acceleration',
     name: 'vue-acceleration',
     component: () => import('../views/VueAccelerationApp.vue')
+  },{
+    path: '/form-iview',
+    name: 'form-iview',
+    component: () => import('../views/FormIview.vue')
   }
 ]
 
