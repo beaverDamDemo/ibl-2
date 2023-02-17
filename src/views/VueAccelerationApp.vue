@@ -637,17 +637,6 @@ const calculatePower = (
 };
 </script>
 <style>
-html {
-  min-width: 440px;
-}
-
-#app {
-  background-color: rgb(30, 59, 52);
-  color: rgb(255, 140, 139);
-  font-family: Museo;
-  padding: 10px;
-}
-
 #app .ourForm {
   margin: 0.875rem;
 }

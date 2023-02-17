@@ -13,8 +13,8 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background-color: rgb(211, 183, 56);
+  color: rgb(196, 50, 83);
   min-height: 100vh;
 }
 
@@ -23,11 +23,10 @@ nav {
 }
 
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  font-size: 1.25rem;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  font-weight: bold;
 }
 </style>

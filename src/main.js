@@ -18,7 +18,7 @@
 // import interceptorsSetup from "./interceptors/interceptors.js";
 // import Multiselect from "vue-multiselect";
 import iView from "iview";
-// import locale from "iview/dist/locale/it-IT";
+import locale from "iview/dist/locale/it-IT";
 // import Card from "./components/custom/cardfooter.vue";
 // import ElTable from "./components/custom/tablescrollbar.vue";
 // import VueMq from "vue-mq";
@@ -49,9 +49,9 @@ import iView from "iview";
 
 // Vue.use(CKEditor);
 // Vue.use(Vuebar);
-// Vue.use(iView, {
-//   locale,
-// });
+Vue.use(iView, {
+  locale,
+});
 // Vue.use(
 //   ClientTable,
 //   {
