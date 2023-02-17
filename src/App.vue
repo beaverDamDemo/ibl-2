@@ -26,9 +26,7 @@
           <BreadcrumbItem>Components</BreadcrumbItem>
           <BreadcrumbItem>Layout</BreadcrumbItem>
         </Breadcrumb>
-        <Content
-          :style="{ padding: '24px 0', minHeight: '280px', background: '#fff' }"
-        >
+        <Content :style="{ padding: '24px 0' }">
           <Layout>
             <Sider hide-trigger :style="{ background: '#fff' }">
               <Menu
@@ -67,8 +65,6 @@
             <Content
               :style="{
                 padding: '24px',
-                minHeight: '280px',
-                background: '#fff',
               }"
             >
               <Card>
@@ -103,12 +99,13 @@
 </style>
 
 <style scoped>
-.layout {
+.ivu-layout {
   border: 1px solid #d7dde4;
   background: #f5f7f9;
   position: relative;
   border-radius: 4px;
-  overflow: hidden;
+  overflow: scroll;
+  min-height: calc(100vh - 238px);
 }
 .layout-logo {
   width: 100px;

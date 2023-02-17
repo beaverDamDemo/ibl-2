@@ -1,37 +1,30 @@
 <template>
   <div id="app">
-    <Input v-model="value1" size="large" placeholder="large size"></Input>
-    <br />
-    <Input v-model="value2" placeholder="default size"></Input>
-    <br />
-    <Input v-model="value3" size="small" placeholder="small size"></Input>
+    <Input
+      v-model="value1"
+      size="large"
+      type="number"
+      placeholder="large size"
+    ></Input>
     <div style="margin-bottom: 10px">
       <Slider v-model="value" range></Slider>
     </div>
     <div style="margin-bottom: 10px">
       <RadioGroup v-model="phone">
         <Radio label="apple">
-          <!-- <Icon type="social-apple"></Icon> -->
+          <Icon type="social-apple"></Icon>
           <span>Apple</span>
         </Radio>
         <Radio label="android">
-          <!-- <Icon type="social-android"></Icon> -->
+          <Icon type="social-android"></Icon>
           <span>Android</span>
         </Radio>
         <Radio label="windows">
-          <!-- <Icon type="social-windows"></Icon> -->
+          <Icon type="social-windows"></Icon>
           <span>Windows</span>
         </Radio>
       </RadioGroup>
     </div>
-    <div style="margin-bottom: 10px">
-      <RadioGroup v-model="animal">
-        <Radio label="金斑蝶"></Radio>
-        <Radio label="爪哇犀牛"></Radio>
-        <Radio label="印度黑羚"></Radio>
-      </RadioGroup>
-    </div>
-
     <Button
       @click="onLogStore"
       type="error"
@@ -55,13 +48,9 @@
       <Button @click="exportWithSheetJS" type="error" disabled
         >Export with SheetJS (WIP)</Button
       >
-    </div>
-    <div style="margin-bottom: 10px">
-      <i-button @click="vzorcek" type="success">vzorcek</i-button>
-      <Button @click="vzorcek" type="primary">vzorcek</Button>
+      <Button @click="vzorcek" type="primary">navodila</Button>
       <Modal v-model="isModalVisible" title="welcome">Welcome to iView</Modal>
     </div>
-
     <!-- <ourOutput :inputData.sync="finalGearMin" /> -->
   </div>
 </template>
