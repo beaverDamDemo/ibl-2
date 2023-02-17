@@ -26,13 +26,7 @@
       <Radio label="印度黑羚"></Radio>
     </RadioGroup>
 
-    <button
-      style="position: absolute; right: 20px; top: 10px"
-      class="btn btn-danger"
-      @click="onLogStore"
-    >
-      log store
-    </button>
+    <Button @click="onLogStore" type="error"> log store </Button>
     <!-- <ourForm class="ourForm"></ourForm> -->
     <div>
       <input type="checkbox" name="showMyChart" v-model="showMyChart" />

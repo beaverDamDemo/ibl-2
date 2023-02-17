@@ -2,17 +2,20 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/vue-acceleration">Vue acceleration</router-link>
     </nav>
     <router-view />
   </div>
 </template>
 
 <style>
+@font-face {
+  font-family: "JosefinSans";
+  src: url("assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf");
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "JosefinSans";
   background-color: rgb(211, 183, 56);
   color: rgb(196, 50, 83);
   min-height: 100vh;
