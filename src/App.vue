@@ -4,8 +4,8 @@
       <Sider hide-trigger>
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link> |
-        <router-link to="/vue-acceleration">Vue acceleration</router-link> |
-        <router-link to="/form-iview">Form Iview</router-link>
+        <router-link to="/vue-acceleration">acc</router-link> |
+        <router-link to="/form-iview">Form</router-link>
       </Sider>
       <Layout>
         <Header>
@@ -22,13 +22,11 @@
               </MenuItem>
               <MenuItem name="3">
                 <Icon type="ios-analytics"></Icon>
-                <router-link to="/vue-acceleration"
-                  >Vue acceleration</router-link
-                >
+                <router-link to="/vue-acceleration">Acc</router-link>
               </MenuItem>
               <MenuItem name="4">
                 <Icon type="ios-paper"></Icon>
-                <router-link to="/form-iview">Form Iview</router-link>
+                <router-link to="/form-iview">Form</router-link>
               </MenuItem>
             </div>
           </Menu>
