@@ -50,65 +50,65 @@ Vue.use(Vuebar);
 Vue.use(iView, {
   locale,
 });
-// Vue.use(
-//   ClientTable,
-//   {
-//     filterable: false,
-//     pagination: {
-//       dropdown: false,
-//     },
-//     perPage: 15,
-//     perPageValues: [],
-//   },
-//   false,
-//   "bootstrap4",
-//   "default"
-// );
+Vue.use(
+  ClientTable,
+  {
+    filterable: false,
+    pagination: {
+      dropdown: false,
+    },
+    perPage: 15,
+    perPageValues: [],
+  },
+  false,
+  "bootstrap4",
+  "default"
+);
 
 // interceptorsSetup();
 Vue.use(Vuex);
-// Vue.use(VueWait);
-// Vue.use(vueMoment);
-// Vue.use(VueNumeric);
-// Vue.use(Notifications);
-// Vue.use(vuescroll, {
-//   ops: {
-//     vuescroll: {
-//       detectResize: false,
-//     },
-//     rail: {
-//       specifyBorderRadius: "0px",
-//       gutterOfSide: "5px",
-//       keepShow: true,
-//     },
-//     bar: {
-//       background: "rgba(121, 121, 121, 0.6)",
-//       onlyShowBarOnScroll: false,
-//       specifyBorderRadius: "0px",
-//     },
-//   },
-// });
+Vue.use(VueWait);
+Vue.use(vueMoment);
+Vue.use(VueNumeric);
+Vue.use(Notifications);
+Vue.use(vuescroll, {
+  ops: {
+    vuescroll: {
+      detectResize: false,
+    },
+    rail: {
+      specifyBorderRadius: "0px",
+      gutterOfSide: "5px",
+      keepShow: true,
+    },
+    bar: {
+      background: "rgba(121, 121, 121, 0.6)",
+      onlyShowBarOnScroll: false,
+      specifyBorderRadius: "0px",
+    },
+  },
+});
 
-// Vue.use(VueAxios, axios);
-// axios.defaults.baseURL =
-//   process.env.NODE_ENV === "production"
-//     ? window.location.origin
-//     : process.env.BASE_URL;
+Vue.use(VueAxios, axios);
+axios.defaults.baseURL =
+  process.env.NODE_ENV === "production"
+    ? window.location.origin
+    : process.env.BASE_URL;
 
-// Vue.component("multiselect", Multiselect);
-// Vue.component("infinite-loading", InfiniteLoading);
+Vue.component("multiselect", Multiselect);
+Vue.component("infinite-loading", InfiniteLoading);
 // Vue.component("el-card-footer", Card);
 // Vue.component("el-table-scrollbar", ElTable);
 // Vue.config.productionTip = false;
 
-// const token = localStorage.getItem("user-token");
-// if (token) {
-//   axios.defaults.headers.common["Authorization"] = token;
-// }
+const token = localStorage.getItem("user-token");
+if (token) {
+  axios.defaults.headers.common["Authorization"] = token;
+}
 
 // require("./bus/eventBus.js");
 // require("./filters/datetimeFilters");
-// Vue.config.devtools = process.env.VUE_APP_DEVTOOLS_ENABLED;
+Vue.config.devtools = process.env.VUE_APP_DEVTOOLS_ENABLED;
 
 // import clickOutside from "./directives/clickOutside.js";
 // Vue.directive("click-outside", clickOutside);
