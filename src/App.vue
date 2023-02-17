@@ -14,29 +14,25 @@
             <div class="layout-nav">
               <MenuItem name="1">
                 <Icon type="ios-navigate"></Icon>
-                Item 1
+                <router-link to="/">Home</router-link>
               </MenuItem>
               <MenuItem name="2">
                 <Icon type="ios-keypad"></Icon>
-                Item 2
+                <router-link to="/about">About</router-link>
               </MenuItem>
               <MenuItem name="3">
                 <Icon type="ios-analytics"></Icon>
-                Item 3
+                <router-link to="/vue-acceleration"
+                  >Vue acceleration</router-link
+                >
               </MenuItem>
               <MenuItem name="4">
                 <Icon type="ios-paper"></Icon>
-                Item 4
+                <router-link to="/form-iview">Form Iview</router-link>
               </MenuItem>
             </div>
           </Menu>
-          <nav>
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link> |
-            <router-link to="/vue-acceleration">Vue acceleration</router-link> |
-            <router-link to="/form-iview">Form Iview</router-link>
-          </nav></Header
-        >
+        </Header>
         <Content :style="{ padding: '0 50px' }">
           <router-view />
           <Breadcrumb :style="{ margin: '20px 0' }">
@@ -83,7 +79,7 @@
 .layout-logo {
   width: 100px;
   height: 30px;
-  background: #5b6270;
+  background: url("../public/logo.png") no-repeat;
   border-radius: 3px;
   float: left;
   position: relative;
