@@ -5,30 +5,42 @@
     <Input v-model="value2" placeholder="default size"></Input>
     <br />
     <Input v-model="value3" size="small" placeholder="small size"></Input>
-    <Slider v-model="value" range></Slider>
-    <RadioGroup v-model="phone">
-      <Radio label="apple">
-        <!-- <Icon type="social-apple"></Icon> -->
-        <span>Apple</span>
-      </Radio>
-      <Radio label="android">
-        <!-- <Icon type="social-android"></Icon> -->
-        <span>Android</span>
-      </Radio>
-      <Radio label="windows">
-        <!-- <Icon type="social-windows"></Icon> -->
-        <span>Windows</span>
-      </Radio>
-    </RadioGroup>
-    <RadioGroup v-model="animal">
-      <Radio label="金斑蝶"></Radio>
-      <Radio label="爪哇犀牛"></Radio>
-      <Radio label="印度黑羚"></Radio>
-    </RadioGroup>
+    <div style="margin-bottom: 10px">
+      <Slider v-model="value" range></Slider>
+    </div>
+    <div style="margin-bottom: 10px">
+      <RadioGroup v-model="phone">
+        <Radio label="apple">
+          <!-- <Icon type="social-apple"></Icon> -->
+          <span>Apple</span>
+        </Radio>
+        <Radio label="android">
+          <!-- <Icon type="social-android"></Icon> -->
+          <span>Android</span>
+        </Radio>
+        <Radio label="windows">
+          <!-- <Icon type="social-windows"></Icon> -->
+          <span>Windows</span>
+        </Radio>
+      </RadioGroup>
+    </div>
+    <div style="margin-bottom: 10px">
+      <RadioGroup v-model="animal">
+        <Radio label="金斑蝶"></Radio>
+        <Radio label="爪哇犀牛"></Radio>
+        <Radio label="印度黑羚"></Radio>
+      </RadioGroup>
+    </div>
 
-    <Button @click="onLogStore" type="error"> log store </Button>
+    <Button
+      @click="onLogStore"
+      type="error"
+      style="position: absolute; right: 10px; top: 10px"
+    >
+      log store
+    </Button>
     <!-- <ourForm class="ourForm"></ourForm> -->
-    <div>
+    <div style="margin-bottom: 10px">
       <input type="checkbox" name="showMyChart" v-model="showMyChart" />
       <label for="showMyChart">show dyno</label>
     </div>
@@ -39,12 +51,10 @@
       <!-- <canvas id="myChart"></canvas> -->
     </div>
     <div class="myButContainer">
-      <button @click="startButtonClick" type="button" class="btn btn-success">
-        Run
-      </button>
-      <button @click="exportWithSheetJS" class="btn btn-primary" disabled>
-        Export with SheetJS (WIP)
-      </button>
+      <Button @click="startButtonClick" type="warning">Run</Button>
+      <Button @click="exportWithSheetJS" type="error" disabled
+        >Export with SheetJS (WIP)</Button
+      >
     </div>
     <!-- <ourOutput :inputData.sync="finalGearMin" /> -->
   </div>

@@ -19,6 +19,7 @@
   background-color: rgb(211, 183, 56);
   color: rgb(196, 50, 83);
   min-height: 100vh;
+  padding: 30px;
 }
 
 nav {
