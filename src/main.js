@@ -1,41 +1,41 @@
 
 import Vuex from "vuex";
-// import VueWait from "vue-wait";
-// import axios from "axios";
-// import VueAxios from "vue-axios";
-// import vueMoment from "vue-moment";
-// import VueNumeric from "vue-numeric";
-// import Notifications from "vue-notification";
-// import InfiniteLoading from "vue-infinite-loading";
-// import Vuebar from "vuebar";
-// import vuescroll from "vuescroll";
-// import "vuescroll/dist/vuescroll.css";
-// import { ClientTable } from "vue-tables-2";
+import VueWait from "vue-wait";
+import axios from "axios";
+import VueAxios from "vue-axios";
+import vueMoment from "vue-moment";
+import VueNumeric from "vue-numeric";
+import Notifications from "vue-notification";
+import InfiniteLoading from "vue-infinite-loading";
+import Vuebar from "vuebar";
+import vuescroll from "vuescroll";
+import "vuescroll/dist/vuescroll.css";
+import { ClientTable } from "vue-tables-2";
 // import "./require.js";
 // import interceptorsSetup from "./interceptors/interceptors.js";
-// import Multiselect from "vue-multiselect";
+import Multiselect from "vue-multiselect";
 import iView from "iview";
 import locale from "iview/dist/locale/it-IT";
 import 'iview/dist/styles/iview.css';
 // import Card from "./components/custom/cardfooter.vue";
 // import ElTable from "./components/custom/tablescrollbar.vue";
-// import VueMq from "vue-mq";
-// import CKEditor from "@ckeditor/ckeditor5-vue";
-// import VueTheMask from "vue-the-mask";
-// import * as ModalDialogs from "vue-modal-dialogs";
+import VueMq from "vue-mq";
+import CKEditor from "@ckeditor/ckeditor5-vue";
+import VueTheMask from "vue-the-mask";
+import * as ModalDialogs from "vue-modal-dialogs";
 
 // require("./registerAsides");
-// Vue.use(ModalDialogs); // No options
-// Vue.use(VueTheMask);
-// Vue.use(VueMq, {
-//   breakpoints: {
-//     xs: 768,
-//     sm: 992,
-//     md: 1200,
-//     lg: 1920,
-//     xl: Infinity,
-//   },
-// });
+Vue.use(ModalDialogs); // No options
+Vue.use(VueTheMask);
+Vue.use(VueMq, {
+  breakpoints: {
+    xs: 768,
+    sm: 992,
+    md: 1200,
+    lg: 1920,
+    xl: Infinity,
+  },
+});
 
 // require("./settings/validator.js");
 // require("./bootstrapThings.js");
@@ -45,8 +45,8 @@ import 'iview/dist/styles/iview.css';
 // require("./mixins/mixins.js");
 // require("./styles/_custom.scss");
 
-// Vue.use(CKEditor);
-// Vue.use(Vuebar);
+Vue.use(CKEditor);
+Vue.use(Vuebar);
 Vue.use(iView, {
   locale,
 });
@@ -66,7 +66,7 @@ Vue.use(iView, {
 // );
 
 // interceptorsSetup();
-// Vue.use(Vuex);
+Vue.use(Vuex);
 // Vue.use(VueWait);
 // Vue.use(vueMoment);
 // Vue.use(VueNumeric);
