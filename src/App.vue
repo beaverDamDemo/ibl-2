@@ -2,10 +2,40 @@
   <div id="app">
     <Layout>
       <Sider hide-trigger>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/vue-acceleration">acc</router-link> |
-        <router-link to="/form-iview">Form</router-link>
+        <Sider hide-trigger :style="{ background: '#fff' }">
+          <Menu
+            active-name="1-2"
+            theme="light"
+            width="auto"
+            :open-names="['1']"
+          >
+            <Submenu name="1">
+              <template slot="title">
+                <Icon type="ios-navigate"></Icon>
+                <router-link to="/">Home</router-link>
+              </template>
+              <MenuItem name="1-1">Option 1</MenuItem>
+              <MenuItem name="1-2">Option 2</MenuItem>
+              <MenuItem name="1-3">Option 3</MenuItem>
+            </Submenu>
+            <Submenu name="2">
+              <template slot="title">
+                <Icon type="ios-keypad"></Icon>
+                <router-link to="/vue-acceleration">Acc</router-link>
+              </template>
+              <MenuItem name="2-1">Option 1</MenuItem>
+              <MenuItem name="2-2">Option 2</MenuItem>
+            </Submenu>
+            <Submenu name="3">
+              <template slot="title">
+                <Icon type="ios-analytics"></Icon>
+                <router-link to="/form-iview">Form</router-link>
+              </template>
+              <MenuItem name="3-1">Option 1</MenuItem>
+              <MenuItem name="3-2">Option 2</MenuItem>
+            </Submenu>
+          </Menu>
+        </Sider>
       </Sider>
       <Layout>
         <Header>
@@ -17,14 +47,10 @@
                 <router-link to="/">Home</router-link>
               </MenuItem>
               <MenuItem name="2">
-                <Icon type="ios-keypad"></Icon>
-                <router-link to="/about">About</router-link>
-              </MenuItem>
-              <MenuItem name="3">
                 <Icon type="ios-analytics"></Icon>
                 <router-link to="/vue-acceleration">Acc</router-link>
               </MenuItem>
-              <MenuItem name="4">
+              <MenuItem name="3">
                 <Icon type="ios-paper"></Icon>
                 <router-link to="/form-iview">Form</router-link>
               </MenuItem>
@@ -32,14 +58,15 @@
           </Menu>
         </Header>
         <Content :style="{ padding: '0 50px' }">
-          <router-view />
           <Breadcrumb :style="{ margin: '20px 0' }">
             <BreadcrumbItem>Home</BreadcrumbItem>
             <BreadcrumbItem>Components</BreadcrumbItem>
             <BreadcrumbItem>Layout</BreadcrumbItem>
           </Breadcrumb>
           <Card>
-            <div style="min-height: 200px">Content</div>
+            <div style="min-height: 200px">
+              <router-view />
+            </div>
           </Card>
         </Content>
         <Footer class="layout-footer-center"
@@ -60,7 +87,6 @@
   background-color: rgb(211, 183, 56);
   color: rgb(196, 50, 83);
   min-height: 100vh;
-  padding: 30px;
   text-align: center;
   font-size: 16px;
 }
