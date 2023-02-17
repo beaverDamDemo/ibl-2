@@ -5,18 +5,18 @@
     <Input v-model="value2" placeholder="default size"></Input>
     <br />
     <Input v-model="value3" size="small" placeholder="small size"></Input>
-
+    <Slider v-model="value" range></Slider>
     <RadioGroup v-model="phone">
       <Radio label="apple">
-        <Icon type="social-apple"></Icon>
+        <!-- <Icon type="social-apple"></Icon> -->
         <span>Apple</span>
       </Radio>
       <Radio label="android">
-        <Icon type="social-android"></Icon>
+        <!-- <Icon type="social-android"></Icon> -->
         <span>Android</span>
       </Radio>
       <Radio label="windows">
-        <Icon type="social-windows"></Icon>
+        <!-- <Icon type="social-windows"></Icon> -->
         <span>Windows</span>
       </Radio>
     </RadioGroup>
@@ -82,6 +82,10 @@ export default {
       showMyChart: false,
       phone: undefined,
       animal: undefined,
+      value1: 0,
+      value2: 0,
+      value3: 0,
+      value: [20, 50],
     };
   },
   created() {
