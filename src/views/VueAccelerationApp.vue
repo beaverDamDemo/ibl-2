@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <Input
-      v-model="value1"
-      size="large"
-      type="number"
-      placeholder="large size"
-    ></Input>
+    <Input v-model="value1" size="large" placeholder="large size"></Input>
     <div style="margin-bottom: 10px">
       <Slider v-model="value" range></Slider>
     </div>

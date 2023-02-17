@@ -1,5 +1,5 @@
 
-// import Vuex from "vuex";
+import Vuex from "vuex";
 // import VueWait from "vue-wait";
 // import axios from "axios";
 // import VueAxios from "vue-axios";
