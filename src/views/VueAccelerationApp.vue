@@ -56,6 +56,11 @@
         >Export with SheetJS (WIP)</Button
       >
     </div>
+    <div style="margin-bottom: 10px">
+      <i-button @click="vzorcek" type="success">vzorcek</i-button>
+      <Modal v-model="isModalVisible" title="welcome">Welcome to iView</Modal>
+    </div>
+
     <!-- <ourOutput :inputData.sync="finalGearMin" /> -->
   </div>
 </template>
@@ -90,12 +95,16 @@ export default {
       value2: 0,
       value3: 0,
       value: [20, 50],
+      isModalVisible: false,
     };
   },
   created() {
     window.dispatchEvent(new Event("myPreloderEvent"));
   },
   methods: {
+    vzorcek() {
+      this.isModalVisible = !this.isModalVisible;
+    },
     onLogStore() {
       Object.entries(this.store).forEach((e) => {
         console.log(e[0] + ": " + e[1]);
