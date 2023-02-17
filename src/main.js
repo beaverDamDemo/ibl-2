@@ -19,6 +19,7 @@
 // import Multiselect from "vue-multiselect";
 import iView from "iview";
 import locale from "iview/dist/locale/it-IT";
+import 'iview/dist/styles/iview.css';
 // import Card from "./components/custom/cardfooter.vue";
 // import ElTable from "./components/custom/tablescrollbar.vue";
 // import VueMq from "vue-mq";

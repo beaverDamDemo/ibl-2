@@ -58,6 +58,7 @@
     </div>
     <div style="margin-bottom: 10px">
       <i-button @click="vzorcek" type="success">vzorcek</i-button>
+      <Button @click="vzorcek" type="primary">vzorcek</Button>
       <Modal v-model="isModalVisible" title="welcome">Welcome to iView</Modal>
     </div>
 
