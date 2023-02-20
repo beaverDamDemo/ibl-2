@@ -42,6 +42,7 @@
     "node-sass": "^6.0.0",
     "otplib": "^9.0.0",
     "pspdfkit": "^2022.3.0",
+    "require": "^2.4.20",
     "roboto-fontface": "^0.10.0",
     "sass-loader": "^7.0.1",
     "string-humanize": "^1.0.1",
