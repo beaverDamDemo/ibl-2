@@ -54,6 +54,7 @@
                   </template>
                   <MenuItem name="3-1"><router-link to="/form-iview">All From Docs</router-link></MenuItem>
                   <MenuItem name="3-2"><router-link to="/my-form">My Form</router-link></MenuItem>
+                  <MenuItem name="3-3"><router-link to="/another-form" exact>Another Form</router-link></MenuItem>
                 </Submenu>
               </Menu>
             </Sider>
