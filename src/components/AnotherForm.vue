@@ -46,11 +46,14 @@
         </Row>
         <Row>
             <div class="caro">
-                <Carousel :interval="250" type="card" height="100px">
+                <Carousel autoplay :autoplay-speed="1500" type="card" height="100px">
                     <Carousel-Item v-for="(i, index) in options" :key="`carousel-item-${index}`">
                         {{ i.label }}
                     </Carousel-Item>
                 </Carousel>
+                <p>to improve carousel take a look at <b>this</b> tutorial here: <a
+                        href="http://v2.iviewui.com/components/carousel-en">http://v2.iviewui.com/components/carousel-en</a>
+                </p>
             </div>
         </Row>
     </section>
