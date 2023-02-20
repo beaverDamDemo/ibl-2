@@ -248,7 +248,6 @@
         </FormItem>
       </Form>
       </Col>
-
     </Row>
   </section>
 </template>
@@ -465,5 +464,10 @@ export default {
 <style>
 .pitt {
   margin-bottom: 1rem;
+}
+
+.ivu-row {
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
 }
 </style>
