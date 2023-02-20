@@ -12,7 +12,7 @@
                 </Form-Item>
             </Form>
             <Row>
-                <Button class="login-btn" type="primary" @click="onSubmit">Login</Button>
+                <Button class="login-btn" type="success" @click="onSubmit" long>Login</Button>
             </Row>
         </Card>
         </Col>
@@ -29,7 +29,12 @@
                 <Form-Item>
                     <Button class="login-btn" type="error" @click="onSubmit" long>Register</Button>
                 </Form-Item>
-
+                <Form-item label="Select Car">
+                    <Select class="dob" :model="value" placeholder="Select" size="large">
+                        <Option v-for="i in options" :key="i.value" :label="i.label" :value="i.value">
+                        </Option>
+                    </Select>
+                </Form-item>
                 <Row>
                     <Button class="login-btn" type="warning" @click="onSubmit" long>Register</Button>
                 </Row>
@@ -51,7 +56,19 @@ export default {
             form: {
                 email: '',
                 password: ''
-            }
+            },
+            options: [
+                {
+                    label: 'F40',
+                    value: 'F40'
+                }, {
+                    label: 'GTO',
+                    value: 'GTO'
+                }, {
+                    label: 'Testarossa',
+                    value: 'Testarossa'
+                }
+            ]
         }
     },
     methods: {
