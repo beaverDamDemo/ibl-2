@@ -1,35 +1,40 @@
 <template>
     <Row type="flex" justify="center" :gutter="20">
-        <Col :span="8">
+        <Col :span="12" type="flex" justify="left">
         <Card>
             <h3>Login to Our Site</h3>
-            <Form :label-position="labelPosition" label-width="80" :model="formLabel">
+            <Form label-position="top" :model="formLabel">
                 <Form-Item label="Email">
                     <Input v-model="form.email"></Input>
                 </Form-Item>
                 <Form-Item label="Password">
                     <Input type="password" v-model="form.password"></Input>
                 </Form-Item>
-                <Form-Item label="Email">
-                    <Button class="login-btn" type="primary" @click="onSubmit">Login</Button>
-                </Form-Item>
             </Form>
+            <Row>
+                <Button class="login-btn" type="primary" @click="onSubmit">Login</Button>
+            </Row>
         </Card>
         </Col>
-        <Col :span="8">
+        <Col :span="12">
         <Card>
             <h3>Register</h3>
-            <Form :label-position="labelPosition" label-width="80" :model="formLabel">
+            <Form label-position="left" label-width="80" :model="formLabel">
                 <Form-Item label="Email">
                     <Input v-model="form.email"></Input>
                 </Form-Item>
                 <Form-Item label="Password">
                     <Input type="password" v-model="form.password"></Input>
                 </Form-Item>
-                <Form-Item label="Email">
-                    <Button class="login-btn" type="error" @click="onSubmit">Register</Button>
+                <Form-Item>
+                    <Button class="login-btn" type="error" @click="onSubmit" long>Register</Button>
                 </Form-Item>
+
+                <Row>
+                    <Button class="login-btn" type="warning" @click="onSubmit" long>Register</Button>
+                </Row>
             </Form>
+            <p><a href="https://www.youtube.com/watch?v=pW-Vk9-w1bo">https://www.youtube.com/watch?v=pW-Vk9-w1bo</a></p>
         </Card>
         </Col>
     </Row>
@@ -39,7 +44,6 @@
 export default {
     data () {
         return {
-            labelPosition: 'top',
             formLabel: {
                 email: 'Email',
                 password: 'Password'
@@ -58,4 +62,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.ivu-col:nth-child(1) {
+    text-align: left;
+}
+</style>
