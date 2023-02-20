@@ -6,16 +6,16 @@
           <div class="layout-logo"></div>
           <div class="layout-nav">
             <MenuItem name="1">
-              <Icon type="ios-navigate"></Icon>
-              <router-link to="/">Home</router-link>
+            <Icon type="ios-navigate"></Icon>
+            <router-link to="/">Home</router-link>
             </MenuItem>
             <MenuItem name="2">
-              <Icon type="ios-analytics"></Icon>
-              <router-link to="/vue-acceleration">Acc</router-link>
+            <Icon type="ios-analytics"></Icon>
+            <router-link to="/vue-acceleration">Acc</router-link>
             </MenuItem>
             <MenuItem name="3">
-              <Icon type="ios-paper"></Icon>
-              <router-link to="/form-iview">Form</router-link>
+            <Icon type="ios-paper"></Icon>
+            <router-link to="/form-iview">Form</router-link>
             </MenuItem>
           </div>
         </Menu>
@@ -29,12 +29,7 @@
         <Content :style="{ padding: '24px 0' }">
           <Layout>
             <Sider hide-trigger :style="{ background: '#fff' }">
-              <Menu
-                active-name="1-2"
-                theme="light"
-                width="auto"
-                :open-names="['1']"
-              >
+              <Menu active-name="1-2" theme="light" width="auto" :open-names="['1']">
                 <Submenu name="1">
                   <template slot="title">
                     <Icon type="ios-navigate"></Icon>
@@ -55,18 +50,16 @@
                 <Submenu name="3">
                   <template slot="title">
                     <Icon type="ios-analytics"></Icon>
-                    <router-link to="/form-iview">Form</router-link>
+                    Form
                   </template>
-                  <MenuItem name="3-1">Option 1</MenuItem>
-                  <MenuItem name="3-2">Option 2</MenuItem>
+                  <MenuItem name="3-1"><router-link to="/form-iview">All From Docs</router-link></MenuItem>
+                  <MenuItem name="3-2"><router-link to="/my-form">My Form</router-link></MenuItem>
                 </Submenu>
               </Menu>
             </Sider>
-            <Content
-              :style="{
-                padding: '24px',
-              }"
-            >
+            <Content :style="{
+              padding: '24px',
+            }">
               <Card>
                 <div style="min-height: 200px">
                   <router-view />
@@ -75,9 +68,7 @@
             </Content>
           </Layout>
         </Content>
-        <Footer class="layout-footer-center"
-          >2011-2016 &copy; TalkingData</Footer
-        >
+        <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
       </Layout>
     </Layout>
   </div>
@@ -88,6 +79,7 @@
   font-family: "JosefinSans";
   src: url("assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf");
 }
+
 #app {
   font-family: "JosefinSans";
   background-color: rgb(211, 183, 56);
@@ -107,6 +99,7 @@
   overflow: scroll;
   min-height: calc(100vh - 238px);
 }
+
 .layout-logo {
   width: 100px;
   height: 30px;
@@ -117,11 +110,13 @@
   top: 15px;
   left: 20px;
 }
+
 .layout-nav {
   width: 420px;
   margin: 0 auto;
   margin-right: 20px;
 }
+
 .layout-footer-center {
   text-align: center;
 }

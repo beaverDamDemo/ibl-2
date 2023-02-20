@@ -26,6 +26,10 @@ const routes = [
     path: '/form-iview',
     name: 'form-iview',
     component: () => import('../views/FormIview.vue')
+  },{
+    path: '/my-form',
+    name: 'my-form',
+    component: () => import('../views/MyFormView.vue')
   }
 ]
 
