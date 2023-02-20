@@ -2,7 +2,7 @@
     <section>
         <h1>brusca</h1>
         <Row>
-            <Col>
+            <Col span="12">
             <Form ref="formInline" :model="formInline" :rules="ruleInline" yyyinline>
                 <FormItem prop="user">
                     <Input type="text" v-model="formInline.user" placeholder="Username">
@@ -20,7 +20,7 @@
             </Form>
             </Col>
 
-            <Col>
+            <Col span="12">
             <Form ref="formValidate" v-model="formValidate" :rules="ruleValidate" :label-width="80">
                 <FormItem label="Name" prop="name">
                     <Input v-model="formValidate.name" placeholder="Enter your name"></Input>
