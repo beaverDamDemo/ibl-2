@@ -46,8 +46,8 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    getFerraris: state => {
-      return state.cars.filter(car => car.name.indexOf("Ferrari") > -1)
+    actionIncrement (context) {
+      context.commit('increment')
     }
   },
   modules: {

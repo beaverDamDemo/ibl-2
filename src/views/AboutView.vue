@@ -7,7 +7,7 @@
         item
       }}</li>
     </ul>
-    <button @click="foo">foo</button>
+    <button @click="actionIncrement">actionIncrement</button>
     <ol>
       <li v-for="(item, index) in $store.getters.getFerraris" :key="index">{{
         item
@@ -29,8 +29,8 @@ export default {
     storeCommitIncrement () {
       this.$store.commit('increment')
     },
-    foo () {
-
+    actionIncrement () {
+      this.$store.dispatch('actionIncrement')
     },
   },
   mounted () {
