@@ -7,11 +7,17 @@
         item
       }}</li>
     </ul>
-    <button @click="storeGetFerraris">storeGetFerraris</button>
+    <button @click="foo">foo</button>
+    <ol>
+      <li v-for="(item, index) in $store.getters.getFerraris" :key="index">{{
+        item
+      }}</li>
+    </ol>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 
 export default {
   data () {
@@ -23,30 +29,28 @@ export default {
     storeCommitIncrement () {
       this.$store.commit('increment')
     },
+    foo () {
+
+    },
   },
   mounted () {
-    // console.log(this.getCars)
     // this.fetchProducts()
   },
-  computed: {
-    myCars () {
-      return this.$store.state.cars
+
+  // shorthand for computed is mapstate
+  // computed: {
+  //   myCars () {
+  //     return this.$store.state.cars
+  //   }
+  // },
+  computed: mapState({
+    myCars: state => state.cars,
+    countPlusLocalState (state) {
+      return state.cars
     }
-  },
+  }),
   getters: {
-    storeGetFerraris () {
-      return this.$store.dispatch('getFerraris')
-    },
-    cartProducts (state, getters, rootState) {
-      return state.items.map(cartItem => {
-        const product = rootState.products.items.find(product => product.id === cartItem.id)
-        return {
-          title: product.title,
-          price: product.price,
-          quantity: cartItem.quantity
-        }
-      })
-    }
+
   }
 }
 </script>
