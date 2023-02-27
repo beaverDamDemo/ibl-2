@@ -9,16 +9,44 @@
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100" />
       </div>
       <v-spacer></v-spacer>
-      <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-      <v-btn text>
-        <span class="mr-2">About</span>
-      </v-btn>
+      <router-link to="/about">
+        <v-btn text>
+          <span class="mr-2">
+            About
+          </span>
+        </v-btn>
+      </router-link>
+      <router-link to="/vue-acceleration">
+        <v-btn text>
+          <span class="mr-2">
+            vue-acceleration
+          </span>
+        </v-btn>
+      </router-link>
+      <router-link to="/form-iview">
+        <v-btn text>
+          <span class="mr-2">
+            form-iview
+          </span>
+        </v-btn>
+      </router-link>
+      <router-link to="/my-form">
+        <v-btn text>
+          <span class="mr-2">
+            my-form
+          </span>
+        </v-btn>
+      </router-link>
+      <router-link to="/another-form">
+        <v-btn text>
+          <span class="mr-2">
+            another-form
+          </span>
+        </v-btn>
+      </router-link>
     </v-app-bar>
     <v-main>
-
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>

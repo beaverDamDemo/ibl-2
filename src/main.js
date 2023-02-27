@@ -132,6 +132,7 @@ import router from './router'
 import store from './store'
 import Vuetify from "vuetify/lib";
 import vuetify from "./plugins/vuetify";
+import VueRouter from "vue-router";
 
 Vue.config.productionTip = false
 Vue.use(Vuetify);
