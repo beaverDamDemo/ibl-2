@@ -22,20 +22,7 @@ const routes = [
     path: '/vue-acceleration',
     name: 'vue-acceleration',
     component: () => import('../views/VueAccelerationApp.vue')
-  },{
-    path: '/form-iview',
-    name: 'form-iview',
-    component: () => import('../views/FormIview.vue')
-  },{
-    path: '/my-form',
-    name: 'my-form',
-    component: () => import('../views/MyFormView.vue')
-  }
-  ,{
-    path: '/another-form',
-    name: 'another-form',
-    component: () => import('../components/AnotherForm.vue')
-  }
+  },
 ]
 
 const router = new VueRouter({

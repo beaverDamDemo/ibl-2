@@ -1,13 +1,15 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img alt="Vuetify Logo" class="shrink mr-2" contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
+      <router-link to="/">
+        <div class="d-flex align-center">
+          <v-img alt="Vuetify Logo" class="shrink mr-2" contain
+            src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
 
-        <v-img alt="Vuetify Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100" />
-      </div>
+          <v-img alt="Vuetify Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100"
+            src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100" />
+        </div>
+      </router-link>
       <v-spacer></v-spacer>
       <router-link to="/about">
         <v-btn text>
@@ -20,27 +22,6 @@
         <v-btn text>
           <span class="mr-2">
             vue-acceleration
-          </span>
-        </v-btn>
-      </router-link>
-      <router-link to="/form-iview">
-        <v-btn text>
-          <span class="mr-2">
-            form-iview
-          </span>
-        </v-btn>
-      </router-link>
-      <router-link to="/my-form">
-        <v-btn text>
-          <span class="mr-2">
-            my-form
-          </span>
-        </v-btn>
-      </router-link>
-      <router-link to="/another-form">
-        <v-btn text>
-          <span class="mr-2">
-            another-form
           </span>
         </v-btn>
       </router-link>
