@@ -1,124 +1,41 @@
 <template>
-  <div id="app" class="layout">
-    <Layout>
-      <Header>
-        <Menu mode="horizontal" theme="dark" active-name="1">
-          <div class="layout-logo"></div>
-          <div class="layout-nav">
-            <MenuItem name="1">
-            <Icon type="ios-navigate"></Icon>
-            <router-link to="/">Home</router-link>
-            </MenuItem>
-            <MenuItem name="2">
-            <Icon type="ios-analytics"></Icon>
-            <router-link to="/vue-acceleration">Acc</router-link>
-            </MenuItem>
-            <MenuItem name="3">
-            <Icon type="ios-paper"></Icon>
-            <router-link to="/form-iview">Form</router-link>
-            </MenuItem>
-          </div>
-        </Menu>
-      </Header>
-      <Layout :style="{ padding: '0 50px' }">
-        <Breadcrumb :style="{ margin: '16px 0' }">
-          <BreadcrumbItem>Home</BreadcrumbItem>
-          <BreadcrumbItem>Components</BreadcrumbItem>
-          <BreadcrumbItem>Layout</BreadcrumbItem>
-        </Breadcrumb>
-        <Content :style="{ padding: '24px 0' }">
-          <Layout>
-            <Sider hide-trigger :style="{ background: '#fff' }">
-              <Menu active-name="1-2" theme="light" width="auto" :open-names="['1']">
-                <Submenu name="1">
-                  <template slot="title">
-                    <Icon type="ios-navigate"></Icon>
-                    <router-link to="/">Home</router-link>
-                  </template>
-                  <MenuItem name="1-1"><router-link to="/about">About</router-link></MenuItem>
-                  <MenuItem name="1-2"><router-link to="/">Home</router-link></MenuItem>
-                  <MenuItem name="1-3"><router-link to="/">Home</router-link></MenuItem>
-                </Submenu>
-                <Submenu name="2">
-                  <template slot="title">
-                    <Icon type="ios-keypad"></Icon>
-                    <router-link to="/vue-acceleration">Acc</router-link>
-                  </template>
-                  <MenuItem name="2-1">Option 1</MenuItem>
-                  <MenuItem name="2-2">Option 2</MenuItem>
-                </Submenu>
-                <Submenu name="3">
-                  <template slot="title">
-                    <Icon type="ios-analytics"></Icon>
-                    Form
-                  </template>
-                  <MenuItem name="3-1"><router-link to="/form-iview">All From Docs</router-link></MenuItem>
-                  <MenuItem name="3-2"><router-link to="/my-form">My Form</router-link></MenuItem>
-                  <MenuItem name="3-3"><router-link to="/another-form" exact>Another Form</router-link></MenuItem>
-                </Submenu>
-              </Menu>
-            </Sider>
-            <Content :style="{
-              padding: '24px',
-            }">
-              <Card>
-                <div style="min-height: 200px">
-                  <router-view />
-                </div>
-              </Card>
-            </Content>
-          </Layout>
-        </Content>
-        <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
-      </Layout>
-    </Layout>
-  </div>
+  <v-app>
+    <v-app-bar app color="primary" dark>
+      <div class="d-flex align-center">
+        <v-img alt="Vuetify Logo" class="shrink mr-2" contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
+
+        <v-img alt="Vuetify Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100" />
+      </div>
+      <v-spacer></v-spacer>
+      <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+      <v-btn text>
+        <span class="mr-2">About</span>
+      </v-btn>
+    </v-app-bar>
+    <v-main>
+
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-@font-face {
-  font-family: "JosefinSans";
-  src: url("assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf");
-}
+<script lang="ts">
+import Vue from 'vue';
+import HelloWorld from './components/HelloWorld.vue';
 
-#app {
-  font-family: "JosefinSans";
-  background-color: rgb(211, 183, 56);
-  color: rgb(196, 50, 83);
-  min-height: 100vh;
-  text-align: center;
-  font-size: 16px;
-}
-</style>
+export default Vue.extend({
+  name: 'App',
 
-<style scoped>
-.ivu-layout {
-  border: 1px solid #d7dde4;
-  background: #f5f7f9;
-  position: relative;
-  border-radius: 4px;
-  overflow: scroll;
-  min-height: calc(100vh - 238px);
-}
+  components: {
+    HelloWorld,
+  },
 
-.layout-logo {
-  width: 100px;
-  height: 30px;
-  background: url("../public/logo.png") no-repeat;
-  border-radius: 3px;
-  float: left;
-  position: relative;
-  top: 15px;
-  left: 20px;
-}
-
-.layout-nav {
-  width: 420px;
-  margin: 0 auto;
-  margin-right: 20px;
-}
-
-.layout-footer-center {
-  text-align: center;
-}
-</style>
+  data: () => ({
+    //
+  }),
+});
+</script>
