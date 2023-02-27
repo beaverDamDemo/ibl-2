@@ -8,23 +8,27 @@ export default new Vuex.Store({
     cars: [
       {
         name: "Ferrari F40",
-        displacement: "5000 ccm",
-        speed: "275 km/h"
+        displacement: "2936 ccm",
+        speed: "324 km/h",
+        turbocharged: true
       },
       {
         name: "Ferrari Testarossa",
         displacement: "4942 ccm",
-        speed: "240 km/h"
+        speed: "293 km/h",
+        v12engine: true
       },
       {
         name: "Ford Sierra Cosworth 4 x 4",
         displacement: "1994 ccm",
-        speed: "290 km/h"
+        speed: "260 km/h",
+        fourWheelDrive: true,
+        turbocharged: true
       },
       {
         name: "Ferrari 3,2 Mondial",
         displacement: "3185 ccm",
-        speed: "299 km/h"
+        speed: "263 km/h"
       }
     ]
   },

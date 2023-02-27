@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex';
 export default {
   name: "app",
   components: {
@@ -18,9 +19,15 @@ export default {
   },
   data () {
     return {
-      // store: store,e,
+      // store: store,
     };
   },
+  computed: mapState({
+    myCars: state => state.cars,
+    countPlusLocalState (state) {
+      return state.cars
+    }
+  }),
   created () {
     const alphabet = ["a", "b", "c", "d", "e", "f", "g"]
     const animals = ["dog", "cat", "mouse", "rabbit", "horse"]
@@ -36,6 +43,15 @@ export default {
     console.log("⚛ ~ sum:", sum);
 
 
+    const vsi_trije = { ...this.myCars[0], ...this.myCars[1], ...this.myCars[2] }
+    console.log("⚛ ~ vsi_trije:", vsi_trije);
+
+
+  },
+  watch: {
+    myCars (newCars) {
+      console.log("⚛ ~ newCars:", newCars);
+    }
   },
   methods: {
     vzorcek () {
