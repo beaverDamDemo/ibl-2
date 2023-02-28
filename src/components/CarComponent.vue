@@ -52,9 +52,16 @@ export default {
         }
     },
     watch: {
-        oprema (val) {
-            console.log("⚛watch~ val:", val);
-
+        // oprema (val) {
+        //     console.log("⚛watch~ val:", val);
+        // worse default solution
+        // }
+        oprema: {
+            // better solution
+            deep: true,
+            handler (val) {
+                console.log('The list of colours has changed!', val);
+            }
         }
     },
     mounted () {
