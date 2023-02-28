@@ -8,7 +8,9 @@
     </CarComponent>
     <CarComponent v-for="(item) in myCars" :key="item.name" :name="item.name" :displacement="item.displacement"
       :styles="{}" :speed="item.speed" :index="5">
-      <h5>item name from slot {{ item.name }}</h5>
+      <template slot="municipio">
+        <h5>item name from slot {{ item.name }}</h5>
+      </template>
     </CarComponent>
     <rendered-component></rendered-component>
     <v-btn @click="onAddOprema" color="error">

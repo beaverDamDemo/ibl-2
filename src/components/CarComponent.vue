@@ -6,7 +6,7 @@
         {{ speed }}
         <span v-my-other-directive>{{ oprema }}</span>
         <CustomButton></CustomButton>
-        <slot></slot>
+        <slot name="municipio"></slot>
     </v-container>
 </template>
 
