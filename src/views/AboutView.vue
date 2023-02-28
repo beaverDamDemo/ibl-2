@@ -12,6 +12,14 @@
         <h5>item name from slot {{ item.name }}</h5>
       </template>
     </CarComponent>
+
+    <VehicleComponentVue v-for="(item) in myCars" :key="item.name">
+      <template>
+        <span>{{ item.name }}</span>
+        <span>{{ item.displacement }}</span>
+        <span>{{ item.speed }}</span>
+      </template>
+    </VehicleComponentVue>
     <rendered-component></rendered-component>
     <v-btn @click="onAddOprema" color="error">
       add oprema
@@ -29,9 +37,10 @@
 import { mapState } from 'vuex'
 import CarComponent from '@/components/CarComponent.vue';
 import RenderedComponent from '@/components/RenderedComponent.vue';
+import VehicleComponentVue from '@/components/VehicleComponent.vue';
 
 export default {
-  components: { CarComponent, RenderedComponent },
+  components: { CarComponent, RenderedComponent, VehicleComponentVue },
   data () {
     return {
 
