@@ -6,6 +6,7 @@
         {{ speed }}
         <span v-my-other-directive>{{ oprema }}</span>
         <CustomButton></CustomButton>
+        <slot></slot>
     </v-container>
 </template>
 
@@ -13,7 +14,7 @@
 export default {
     data () {
         return {
-
+            bind: false,
         }
     },
     props: {
@@ -49,7 +50,7 @@ export default {
         cssNastavitve () {
             return {
                 fontWeight: this.styles.fontWeight,
-                color: this.styles.color || 'moccasin',
+                color: this.styles.color || 'saddlebrown',
             }
         }
     },
@@ -87,6 +88,6 @@ export default {
 
 <style scoped>
 :global(#app) {
-    background: peachpuff;
+    /* background: peachpuff; */
 }
 </style>

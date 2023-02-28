@@ -6,7 +6,9 @@
       :displacement="item.displacement" :speed="item.speed" :styles="{ fontWeight: 'bold' }" :oprema="item.oprema"
       :ref="`carComponent-${index}`">
     </CarComponent>
-    <CarComponent v-for="(item, index) in myCars" :key="item.name" :index="index" v-bind="item" :styles="{}">
+    <CarComponent v-for="(item) in myCars" :key="item.name" :name="item.name" :displacement="item.displacement"
+      :styles="{}" :speed="item.speed" :index="5">
+      <h5>item name from slot {{ item.name }}</h5>
     </CarComponent>
     <rendered-component></rendered-component>
     <v-btn @click="onAddOprema" color="error">
