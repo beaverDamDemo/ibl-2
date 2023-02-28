@@ -133,7 +133,9 @@ import store from './store'
 import Vuetify from "vuetify/lib";
 import vuetify from "./plugins/vuetify";
 import VueRouter from "vue-router";
+import CustomButton from "./components/CustomButton.vue";
 
+Vue.component('CustomButton', CustomButton);
 Vue.config.productionTip = false
 Vue.use(Vuetify);
 

@@ -5,6 +5,7 @@
         {{ displacement }}
         {{ speed }}
         {{ oprema }}
+        <CustomButton></CustomButton>
     </v-container>
 </template>
 
@@ -63,6 +64,9 @@ export default {
             handler (val) {
                 console.log('The list of colours has changed!', val);
             }
+        },
+        computedIndex (val) {
+            console.log("⚛ ~ val:", val);
         }
     },
     mounted () {
