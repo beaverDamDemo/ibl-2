@@ -47,6 +47,7 @@ export default {
   mounted () {
     // this.fetchProducts()
     console.log("⚛ ~ this.$refs:", this.$refs);
+    console.log("⚛ ~ vm.$el:", vm.$el);
   },
 
   // shorthand for computed is mapstate

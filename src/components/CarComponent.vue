@@ -71,6 +71,9 @@ export default {
 
     },
     mounted () {
+        console.log("⚛ ~ vm.$props:", this.$props);
+        const c = { ...this.$props }
+        console.log("⚛ ~ c:", c);
 
     }
 }

@@ -139,9 +139,10 @@ Vue.component('CustomButton', CustomButton);
 Vue.config.productionTip = false
 Vue.use(Vuetify);
 
-new Vue({
+var vm = new Vue({
   router,
   store,
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+global.vm = vm;
