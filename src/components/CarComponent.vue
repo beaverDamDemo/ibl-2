@@ -16,9 +16,10 @@ export default {
         }
     },
     props: {
-        'name': {
+        name: {
             type: String,
-            required: true
+            required: true,
+            validator: s => s.length > 10
         },
         'displacement': {
             type: String,
