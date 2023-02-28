@@ -7,6 +7,7 @@
     </CarComponent>
     <CarComponent v-for="(item, index) in myCars" :key="item.name" :index="index" v-bind="item" :styles="{}">
     </CarComponent>
+    <rendered-component></rendered-component>
     <v-btn @click="onAddOprema" color="error">
       add oprema
     </v-btn>
@@ -22,9 +23,10 @@
 <script>
 import { mapState } from 'vuex'
 import CarComponent from '@/components/CarComponent.vue';
+import RenderedComponent from '@/components/RenderedComponent.vue';
 
 export default {
-  components: { CarComponent },
+  components: { CarComponent, RenderedComponent },
   data () {
     return {
 
