@@ -20,14 +20,14 @@ export default new Vuex.Store({
         speed: "293 km/h",
         v12engine: true
       },
-      // {
-      //   name: "Ford Sierra Cosworth 4 x 4",
-      //   oprema: ["zelensky"],
-      //   displacement: "1994 ccm",
-      //   speed: "260 km/h",
-      //   fourWheelDrive: true,
-      //   turbocharged: true
-      // },
+      {
+        name: "Ford Sierra Cosworth 4 x 4",
+        oprema: ["zelensky"],
+        displacement: "1994 ccm",
+        speed: "260 km/h",
+        fourWheelDrive: true,
+        turbocharged: true
+      },
       {
         name: "Ferrari 3,2 Mondial",
         oprema: ["berlusconi"],

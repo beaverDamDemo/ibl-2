@@ -3,7 +3,8 @@
     <h1>This is an about page</h1>
     <v-btn color="warning" @click="storeCommitIncrement">add lamborghini</v-btn>
     <CarComponent v-for="(item, index) in myCars" :key="index" :index="index" :name="item.name"
-      :displacement="item.displacement" :speed="item.speed" :styles="{ fontWeight: 'bold' }" :oprema="item.oprema">
+      :displacement="item.displacement" :speed="item.speed" :styles="{ fontWeight: 'bold' }" :oprema="item.oprema"
+      :ref="`carComponent-${index}`">
     </CarComponent>
     <CarComponent v-for="(item, index) in myCars" :key="item.name" :index="index" v-bind="item" :styles="{}">
     </CarComponent>
@@ -45,6 +46,7 @@ export default {
   },
   mounted () {
     // this.fetchProducts()
+    console.log("⚛ ~ this.$refs:", this.$refs);
   },
 
   // shorthand for computed is mapstate
