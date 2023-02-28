@@ -59,6 +59,11 @@ export default {
   }),
   getters: {
 
+  },
+  watch: {
+    '$route.query.id' (val) {
+      console.log("⚛ ~ val:", val);
+    }
   }
 }
 </script>

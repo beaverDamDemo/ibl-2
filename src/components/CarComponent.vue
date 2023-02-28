@@ -67,7 +67,8 @@ export default {
         },
         computedIndex (val) {
             console.log("⚛ ~ val:", val);
-        }
+        },
+
     },
     mounted () {
 
