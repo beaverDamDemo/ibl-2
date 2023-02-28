@@ -139,6 +139,13 @@ Vue.component('CustomButton', CustomButton);
 Vue.config.productionTip = false
 Vue.use(Vuetify);
 
+Vue.directive('my-focus-directive', {
+  // When the bound element is inserted into the DOM...
+  inserted: function (el) {
+    // Focus the element
+    el.style.backgroundColor='sienna'
+  }
+})
 var vm = new Vue({
   router,
   store,

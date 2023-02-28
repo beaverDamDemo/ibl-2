@@ -1,10 +1,10 @@
 <template>
     <v-container :style="cssNastavitve">
-        {{ computedIndex }}
+        <span v-my-focus-directive>{{ computedIndex }}</span>
         {{ name }}
         {{ displacement }}
         {{ speed }}
-        {{ oprema }}
+        <span v-my-other-directive>{{ oprema }}</span>
         <CustomButton></CustomButton>
     </v-container>
 </template>
@@ -74,7 +74,13 @@ export default {
         console.log("⚛ ~ vm.$props:", this.$props);
         const c = { ...this.$props }
         console.log("⚛ ~ c:", c);
-
+    },
+    directives: {
+        'my-other-directive': {
+            inserted: function (el) {
+                el.style.color = 'darkkhaki';
+            }
+        }
     }
 }
 </script>
