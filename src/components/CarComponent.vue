@@ -78,3 +78,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+:global(#app) {
+    background: peachpuff;
+}
+</style>
