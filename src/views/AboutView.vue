@@ -1,19 +1,19 @@
 <template>
-  <div class="about">
+  <v-container>
     <h1>This is an about page</h1>
-    <button @click="storeCommitIncrement">add lamborghini</button>
+    <v-btn color="warning" @click="storeCommitIncrement">add lamborghini</v-btn>
     <ul>
       <li v-for="(item, index) in myCars" :key="index">{{
         item
       }}</li>
     </ul>
-    <button @click="actionIncrement">actionIncrement</button>
+    <v-btn color="info" @click="actionIncrement">actionIncrement</v-btn>
     <ol>
       <li v-for="(item, index) in $store.getters.getFerraris" :key="index">{{
         item
       }}</li>
     </ol>
-  </div>
+  </v-container>
 </template>
 
 <script>

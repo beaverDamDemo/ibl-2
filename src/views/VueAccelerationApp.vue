@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Button @click="onLogStore" type="error" style="position: absolute; right: 10px; top: 10px">
+    <v-btn @click="onLogStore" color="error" style="position: absolute; right: 10px; top: 10px">
       log store
-    </Button>
+    </v-btn>
     <div class="myButContainer">
       <Button @click="() => { }" type="warning">Run</Button>
       <Button @click="() => { }" type="error">Export with SheetJS (WIP)</Button>
@@ -58,9 +58,6 @@ export default {
       this.isModalVisible = !this.isModalVisible;
     },
     onLogStore () {
-      Object.entries(this.store).forEach((e) => {
-        console.log(e[0] + ": " + e[1]);
-      });
     },
     sendData () {
       this.$eventBus.$emit("send-data", this.setup);
